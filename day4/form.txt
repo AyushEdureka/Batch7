@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    anjaneyulunarsingoju81@gmail.com
+</head>
+<body>
+ <p>A full-stack web developer is a person who can develop both client and server software.<br>
+
+In addition to mastering HTML and CSS, he/she also knows how to:
+
+Program a browser (e.g. using JavaScript, jQuery, Angular, or Vue)
+Program a server (e.g. using PHP, ASP, Python, or Node)
+Program a database (e.g. using SQL, SQLite, or MongoDB)</p>
+
+
+    Name:<input type="text" placeholder="Enter your Name">
+    Email:<input type="email" placeholder="Enter your Email"><br>
+    Password:<input type="password" placeholder="Enter your password"><br>
+    Gender:<input type="radio" name="Gender" >Male
+           <input type="radio" name="Gender" >Female
+           
+    Feedback:<textarea rows="5" cols="25"></textarea>     
+    
+    <button>Sign Up</button>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: bisque; border: 1px solid black; width: 600px;" >
+               <h1 style="text-align:center">User Registration Form</h1>
+
+               <div style="text-align: center;">
+                <img src="https://media.istockphoto.com/id/2132469145/photo/student-using-laptop.webp?a=1&b=1&s=612x612&w=0&k=20&c=6gS9nOFamedRSsQd_ZldH3hOScFKbES-Z1J4_2hXYao=" height="150" width="150">
+               </div>
+
+
+        <form>
+             <label>FullName:</label><br>
+             <input type="text" style="width: 90%;" required ><br><br>
+
+              <label>Email:</label><br>
+             <input type="email" style="width: 90%;" required><br><br>
+
+             <label>Password:</label><br>
+             <input type="password" style="width: 90%;" required><br><br>
+
+             <label>Age:</label><br>
+             <input type="number" style="width: 90%;"><br><br>
+
+             <label>Phone Number:</label><br>
+             <input type="tel" style="width: 90%;"><br><br>
+    
+             <label>Website:</label><br>
+             <input type="url" style="width: 90%;"><br><br>
+
+             <label>Color</label><br>
+             <input type="color" style="width: 90%;"><br><br>
+
+             <label>Resume</label><br>
+             <input type="file" style="width: 90%;"><br><br>
+
+            <label>Hoobies</label><br>
+            <input type="checkbox">Reading
+            <input type="checkbox">Gym
+            <input type="checkbox">Coding<br>
+
+
+            <label>Search</label>
+            <input type="search" style="width: 90%;"><br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>       
+
+
+    </div>
+</body>
+</html>

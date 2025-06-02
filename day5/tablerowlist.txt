@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="5px" cellspacing="15px" cellpadding="10px" style="background-color: lightblue;">
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Country</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Anjaneya</td>
+            <td>India</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Niger</td>
+            <td>USA</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Aditya</td>
+            <td>india</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DEFINTION LIST
+    &copy;  copyright symbol
+    dt: defintion title
+    dd: defintion data 
+    style="font-size: 40px;"  : CSS MODULE 2
+    -->
+     <dl style="text-align: center;">
+        <dt style="font-size: 40px;">Netflix</dt>
+        <dd>It is online OTT Platform  &copy; All rights resevered</dd>
+     </dl>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ORDERED LIST  has type attribute such as 1,A,a,I ,i -->
+
+     <ol>
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li>Soda</li>
+        <li>Chips</li>
+     </ol>
+
+     <!-- UNORDERED LIST type:  circle,disc,sqaure -->
+      <ul>
+        <li>Career</li>
+        <li>Support</li>
+        <li>Contact US</li>
+        <li>Blog</li>
+      </ul>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <iframe width="500" height="462" src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="Marvel Studios&#39; Avengers: Infinity War Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <iframe width="500" height="462" src="https://www.youtube.com/embed/TcMBFSGVi1c" title="Marvel Studios&#39; Avengers: Endgame - Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+
+</html>
