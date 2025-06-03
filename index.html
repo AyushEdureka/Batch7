@@ -1,15 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullstackInternship</title>
-    
+  <meta charset="UTF-8">
+  <title>FutureWeb 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient( to right, Blue, white) }
+    header, footer { background: #131315; color: white; padding: 1em; text-align: center; }
+    nav { background: #e9b0f8; padding: 0.5em; text-align: center; }
+    nav a { color: white; margin: 0 1em; text-decoration: none; }
+    main { padding: 1em; }
+    section, article, aside { margin-bottom: 1.5em; }
+    video, audio { width: 100%; max-width: 500px; }
+    form { background: #f9f9f9; padding: 1em; border: 1px solid #ccc; }
+    label { display: block; margin-top: 1em; }
+  </style>
 </head>
-
 <body>
 
-    <h1>Hii GUYS</h1>
+  <header>
+    <h1>FutureWeb 2025</h1>
+    <p>Global Tech Conference for Web Developers</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#register">Register</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About the Event</h2>
+      <p>Join us for a 3-day event featuring top speakers in AI, Full Stack, and Cloud technologies.</p>
+      <video controls>
+        <source src="./day6/vedio.mp4.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </section>
+
+    <section id="speakers">
+      <h2>Keynote Speakers</h2>
+      <article>
+        <h3>Jane Doe – AI Researcher</h3>
+        <p>Exploring the future of Artificial Intelligence in web development.</p>
+      </article>
+      <article>
+        <h3>John Smith – Full Stack Mentor</h3>
+        <p>Building scalable web apps using HTML5 and Node.js.</p>
+      </article>
+    </section>
+
+    <aside>
+      <h2>Event Audio Teaser</h2>
+      <audio controls>
+        <source src="./day6/a6-82015.mp3" type="audio/mp3">
+        Your browser does not support audio.
+      </audio>
+    </aside>
+
+    <section id="register">
+      <h2>Register Now</h2>
+      <form>
+        <label>Name:
+          <input type="text" name="name" required>
+        </label>
+
+        <label>Email:
+          <input type="email" name="email" required>
+        </label>
+
+        <label>Select Track:
+          <input list="tracks" name="track">
+          <datalist id="tracks">
+            <option value="AI & ML">
+            <option value="Full Stack">
+            <option value="Cloud & DevOps">
+          </datalist>
+        </label>
+
+        <label>Progress (Your learning so far):
+          <progress value="70" max="100"></progress>
+        </label>
+
+        <label>Confidence Level:
+          <meter value="0.8" min="0" max="1">80%</meter>
+        </label>
+
+        <br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FutureWeb Conference. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
