@@ -1,0 +1,12 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    font-style: italic;
+    background-color: burlywood;
+}
+
+p{
+    background-color: bisque;
+    color: red;
+    text-align: center;
+}
