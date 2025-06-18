@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI',  sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .team-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card{
+            /* background-color: white; */
+
+            border-radius: 12px;
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform  0.5s;
+        }
+
+        .card:hover{
+            transform: scale(1.07);
+            background-color: lightcoral;
+        }
+
+        .card img{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+        }
+
+        button{
+            padding: 20px;
+            background-color: blueviolet;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+
+        button:hover{
+            background-color: red;
+        }
+
+        .card h3{
+            color: blue;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet Our Awesome Team🏢</h1>
+
+    <div class="team-container">
+     
+      <div class="card">
+        <img src="https://i.pravatar.cc/100?img=3">
+        <h3>Tawhid</h3>
+        <p>Frontend Developer</p>
+        <button>Linkdln</button>
+      </div>
+
+      <div class="card">
+        <img src="https://i.pravatar.cc/100?img=5">
+        <h3>Niger</h3>
+        <p>UI/UX Developer</p>
+        <button>Linkdln</button>
+      </div>
+
+      <div class="card">
+        <img src="https://i.pravatar.cc/100?img=7">
+        <h3>Omprakash</h3>
+        <p>Backend Developer</p>
+        <button>Linkdln</button>
+      </div>
+
+
+      <div class="card">
+        <img src="https://i.pravatar.cc/100?img=9">
+        <h3>Frank</h3>
+        <p>Project Manager</p>
+        <button>Linkdln</button>
+      </div>
+
+
+    </div>
+</body>
+</html>
+
+
+
+----------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap:40px;
+            height:300px;
+            background-color: #f2f2f2
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 100px;
+        }
+
+        .box:hover{
+            background-color:red;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+</html>

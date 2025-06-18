@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TastyEats - Food Delivery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: tomato;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    /* Banner Section */
+    .banner {
+      position: relative;
+      background: url('https://picsum.photos/800/300?food') no-repeat center;
+      background-size: cover;
+      height: 300px;
+    }
+
+    .order-now {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      background: yellow;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    /* Static Text */
+    .content {
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    /* Relative Positioned Tag */
+    .special {
+      position: relative;
+      background: lightgreen;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .special::after {
+      content: '🔥 Hot Deal!';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    /* Fixed Cart */
+    .cart {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div>TastyEats 🍔</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Banner with Absolute Button -->
+  <section class="banner">
+    <button class="order-now">Order Now</button>
+  </section>
+
+  <!-- Static and Relative Content -->
+  <div class="content">
+    <div class="special">
+      🍽️ Special Offer: Free Delivery on first order!
+    </div>
+    <p>
+      Enjoy delicious meals from your favorite restaurants delivered straight to your home. Our chefs use fresh ingredients, and your satisfaction is our top priority.
+    </p>
+  </div>
+
+  <!-- Fixed Cart Icon -->
+  <div class="cart">🛒</div>
+
+</body>
+</html>

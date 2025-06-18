@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(to right,#74ebd5,#acb6e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        .card{
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .typing{
+            font-size: 28px;
+            white-space: nowrap;
+            width: 0;
+            overflow: hidden;
+            border-right: 3px solid black;
+            animation: abc 3s steps(20) infinite, xyz 0.5s step-end infinite
+        }
+
+        @keyframes abc{
+            from {width: 0;}
+            to   {width: 100%;}
+        }
+
+         @keyframes xyz{
+           50% { border-color: transparent;}
+        }
+
+        .btn{
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff416c;
+            color: white;
+            animation: glow 1.5s infinite alternate;
+
+        }
+
+        @keyframes glow{
+            from{
+                 box-shadow: 0 0 5px #ff416c;
+            }
+
+            to {
+                box-shadow: 0 0 20px blue, 0 0 30px #ff4b2b
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+         <div class="typing">Congrats Benjamin! You did it</div>
+         <button class="btn">Celebate🎉</button>
+    </div>
+</body>
+</html>

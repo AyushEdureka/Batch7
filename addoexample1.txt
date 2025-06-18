@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        document.write("hii i am from head")
+        
+        Not a preffered Way
+    </script> -->
+</head>
+<body>
+
+ 
+    
+
+<script>
+    //Data type: Types of DATA : We can store
+    //1. String = words or char(a,bc,d....)or Text or "Anything inside double quote"
+
+    var course = "Fullstack"
+    console.log(typeof(course))
+
+    //2. Number (21,-21,21.00)
+    var Eployeeid = 12
+    console.log(typeof(Eployeeid))
+
+    //3. Blooean - True or False
+    var isAvaible = false
+    console.log(typeof(isAvaible))
+
+    //4. undefined : No value is assigned 
+    var x;
+    console.log(typeof(x))
+
+    //5. Null
+    var y = null;
+    console.log(typeof(null))
+
+    //Note: There was a bug in JS for null datatype : object
+
+    
+
+
+
+
+
+
+
+
+    var name = "Addo"
+    var name = "Edward"
+    var age =   24
+    var email = "xyz@gmail.com"
+
+    //In var , you can write the same variable name and value will be updated
+
+    console.log(name)
+    console.log(age)
+    console.log(email)
+
+    //2nd Type : let keyword will not allow to use same varibale name
+    //Inside the function
+
+    // let country = "Ghana"
+    // let country = "Inida"
+    // console.log(country)
+
+
+   //3rd Type of variable const : constant --> fixed value : No one can change the value given in const
+
+   const pi=3.14
+   const deliverFee = 20
+   console.log(deliverFee)
+   console.log(pi)
+
+
+
+
+    document.write("Hii i am from body")
+    console.log("Hii i am from body-console")
+</script>
+</body>
+</html>
