@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+   
+     <script>
+
+     //1. Arithmetic : +,-,*,/,%
+     var a= 10
+     var b= 7
+
+     console.log(a+b);  // 10 + 7 = 17
+     console.log(a-b);  // 10 - 7 = 3
+     console.log(a*b);  // 10*7   = 70
+     console.log(a/b);  //10/7    =1.something
+     console.log(a%b);  //10%7  = 3
+
+
+
+     //2. Assignment: To Assign the value ( =  )
+
+     let x=10  //Assigned the value 10 to variable x
+     x+=3 
+     x-=3
+     x*=3
+     x/=3
+
+
+
+
+
+     //3.Comparsion operator
+
+     let p = 20
+     let q = 15
+
+     console.log(p>q);  //20 > 15: True
+     console.log(p<q)  //20 < 15 : False 
+
+     console.log(p>=q);  //True
+
+     console.log(q<=p);  //True
+
+     let height1 = "170"   //String
+     let height2 =  170    // Number
+
+     console.log(height1 == height2);
+
+     // == It will only check the Value Not Data Type
+
+     console.log(height1 === height2);
+
+     //  === It will check The data Type and value
+
+
+
+     //LOGICAL OPERATOR
+     //AND && : if Both condition is True and OUTPUT is TRUE
+
+
+     let isMember = true
+     let totalPrice = 300
+
+     console.log( isMember &&  totalPrice>400) 
+
+
+     //OR ||  : If only one Condition is True then OUTPUT IS TRUE
+
+    console.log( isMember ||  totalPrice>400)
+
+
+
+      //Negation ! : Oppsite value--> output
+
+      let netflixSubsrciption = false
+      console.log(!netflixSubsrciption)
+
+      
+
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let age = 13;
+
+        //1. if statement : IT WILL GIVe YOU THE OUTPUT IF CONDITION IS TRUE
+        // if(condition)
+
+        // if(age>=18){
+ 
+        //     alert('Congrats get your car soon')
+
+        // }
+
+
+        //2 . if else statemnet :  if statment give you ouput of True
+        //    else statment will give you the output of false
+
+
+     let voteAge = 8
+
+     if(voteAge>=18){
+           //body of if
+        document.write('You are allowed to Vote')
+
+     }
+     else {
+      //body of else 
+        alert('Grow up and vote')
+     }
+
+
+    </script>
+</body>
+</html>
+
+

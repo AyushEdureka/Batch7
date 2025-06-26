@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     //Roll A Dice : Get your Lucky No
+       
+     let luckyno =  Math.floor(   Math.random()*6  )+1
+     //  console.log(luckyno):  To Test
+     
+     while(true){
+
+           guess = prompt('Enter Any Number From 1 to 6')
+
+         if(luckyno == guess){
+            alert('You won Squid game')
+            break;
+         }else{
+            alert('Better Luck next time')
+        
+         }  
+   
+
+     }
+   
+   
+
+
+    </script>
+</body>
+</html>

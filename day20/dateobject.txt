@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstname = "Tawhid"
+
+        let lastname = "Talai"
+
+        let fullname = firstname +  "  " +  lastname
+        console.log(fullname)
+
+        console.log(firstname.length)
+
+        console.log(firstname.toUpperCase())
+        console.log(lastname.toLowerCase())
+
+        console.log(lastname[4])
+
+        let xyz = "Hello Frank How are you?"
+        console.log(xyz.replace('Frank','Everyone'))
+    </script>
+</body>
+</html>
+
+
+
+----------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+     //Math Object: Math concept
+
+
+        console.log("Pi ",  Math.PI)
+        console.log("Sqaure Root of 2 :" , Math.SQRT2)
+        console.log(Math.sqrt(9));
+       console.log("Cube of 2 :" , Math.pow(4,3));
+
+       console.log(Math.ceil(8.1));   //ceil: convert into higher value:  9
+       console.log(Math.floor(5.9));  //floor : convert to lower value:   5
+
+
+       console.log(Math.round(6.5));   // 7
+       console.log(Math.round(6.6));   // 7
+       console.log(Math.round(6.4));  //  6
+
+    </script>
+</body>
+</html>
+
+
+
+-----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     //Roll A Dice : Get your Lucky No
+       
+     let luckyno =  Math.floor(   Math.random()*6  )+1
+     //  console.log(luckyno):  To Test
+     
+     while(true){
+
+           guess = prompt('Enter Any Number From 1 to 6')
+
+         if(luckyno == guess){
+            alert('You won Squid game')
+            break;
+         }else{
+            alert('Better Luck next time')
+        
+         }  
+   
+
+     }
+   
+   
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //Date Object: Information about date
+
+    let abc = new Date();
+
+    //variblename.methodname()
+
+    console.log(abc.getFullYear());
+    console.log(abc.getMonth());  //Jan Starts with 0
+    console.log(abc.getDay());  //Monday starts with 1
+    console.log(abc.getDate())
+    console.log(abc.getHours())
+
+    </script>
+</body>
+</html>

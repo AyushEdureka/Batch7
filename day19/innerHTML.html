@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH">Hello Learners</h1>
+
+    <button onclick="myFun()">Click me to change</button>
+
+    <script>
+        function myFun(){
+
+        var xyz = "Hii How are you doing?"    
+       
+
+        //1.element/tag select from html Body
+        //2. document.getElementById()
+
+        const  abc =  document.getElementById("myH");  //h1 Tag has been selected
+
+       //InnerHTML - change or update the content HTML TAG
+
+          abc.innerHTML = xyz 
+
+
+        }
+    </script>
+</body>
+</html>

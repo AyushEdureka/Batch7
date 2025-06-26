@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task to print 1 to 10
+        // let y = 2
+        // y--
+
+        // console.log(y)
+
+        // for(let i=1;i<=10;i++){
+        //     console.log("The value of " +    i)
+        // }
+ 
+
+        // //Task to print 10 to 1
+
+        // for(let y=10; y>=1 ;y--){
+              
+        //     console.log(y)
+
+        // }
+
+
+
+        //While Loop: Entry Controll Loop
+        //while(condition)
+
+        let count = 1
+
+        while(count <=5){
+
+        console.log(count)
+        count++
+
+        }
+
+
+        //Do while : Exit controlled Loop
+
+        let number = 6
+         
+        do{
+
+        console.log("This is do while loop")
+
+        }while(number<5)
+
+
+        //for of : Used in Array to Print data of array 
+
+        let fruits = ["Apple","Bannana","Mango"]
+
+        console.log(fruits)
+
+        for(let y of fruits ){
+            console.log(y)
+        }
+
+
+        //For in: Used in Object
+
+        let car = {
+            //key:value
+            brand:"Tesla",
+            model:"X"
+        }
+         
+         console.log(car.brand)
+
+        for(let a in car){
+            console.log(a + " = "  + car[a])
+        }
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+-------------------->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Input in Js
+
+        // var name =  prompt('Enter your Name?')
+        // console.log(name)
+
+        window.confirm('Are you Sure?')
+    </script>
+</body>
+</html>
+
+
+--------------->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+      //Step 1: Define food items :  var-X, array-X , object 
+
+      let pizza =  {name:"Pizza" , price:200}
+      let burger = {name:"Burger" , price:100}
+      let pasta =  {name:"Pasta" , price:150}
+
+      //Step 2: Customer order :var-X, array-Y , object-X
+
+      let cart = [pizza,burger,pasta];
+
+      //Step 3: Total Price Calculation : 200 + 100 + 150; : Arthmetic operator and Object
+
+      let totalPrice = pizza.price + burger.price + pasta.price;
+
+      console.log("YOUR CART ITEMS:")
+
+      for (let x in pizza){
+        console.log   ("Item Name " + x + " Item Price =   " + pizza[x])
+      }
+       for (let y in burger){
+        console.log("Item Name " +  y + " Item Price =  " + burger[y])
+      }
+       for (let z in pasta){
+        console.log("Item Name " +  z + "Item Price  =  " + pasta[z])
+      }
+
+
+      console.log("Total Price Bedfore Discount " + totalPrice )
+
+
+      //Step 4 : APPLY DISCOUNT (Using condition)
+      // 1st condition premium user and total price > 300 == 20%
+      //2nd  condition  total > 300 == 10%
+      
+      let isPremium = false;
+      let discount = 0
+
+      if(isPremium && totalPrice > 300){
+            
+       discount =   totalPrice * 0.2  //Discount 20%  
+
+      }else if(totalPrice>300){
+
+         discount =   totalPrice * 0.1;  //Disocunt 10%
+
+      }else{
+        console.log("No discount applied")
+      }
+
+      let finalPrice = totalPrice - discount
+      console.log("Final price to pay :" + finalPrice)
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+

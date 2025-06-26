@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task to print 1 to 10
+        // let y = 2
+        // y--
+
+        // console.log(y)
+
+        // for(let i=1;i<=10;i++){
+        //     console.log("The value of " +    i)
+        // }
+ 
+
+        // //Task to print 10 to 1
+
+        // for(let y=10; y>=1 ;y--){
+              
+        //     console.log(y)
+
+        // }
+
+
+
+        //While Loop: Entry Controll Loop
+        //while(condition)
+
+        let count = 1
+
+        while(count <=5){
+
+        console.log(count)
+        count++
+
+        }
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let age = 13;
+
+        //1. if statement : IT WILL GIVe YOU THE OUTPUT IF CONDITION IS TRUE
+        // if(condition)
+
+        // if(age>=18){
+ 
+        //     alert('Congrats get your car soon')
+
+        // }
+
+
+        //2 . if else statemnet :  if statment give you ouput of True
+        //    else statment will give you the output of false
+
+
+    //  let voteAge = 8
+
+    //  if(voteAge>=18){
+    //        //body of if
+    //     document.write('You are allowed to Vote')
+
+    //  }
+    //  else {
+    //   //body of else 
+    //     alert('Grow up and vote')
+    //  }
+
+
+     //Else if : it used to check mutiple condition at same time
+
+    //  let temp = 21;
+
+    //  if(temp >= 30){
+    //        alert('It is sunny Day')
+    //  }
+    //  else if(temp > 25){
+    //       alert('It is warm outside')
+    //  }
+    //  else if(temp>20){
+    //     alert('it is a nice weather')
+    //  }
+    //  else{
+    //     console.log('It is a cold weather')
+    //  }
+
+
+
+    //Switch Statment: To change/switch from one case to another case
+    //switch - keyword
+
+    let day=9;
+
+    switch(day){
+
+        case 1: 
+        console.log("Monday")
+        break;
+
+        case 2: 
+        console.log("Tuesday")
+        break;
+
+        case 3: 
+        console.log("Wednesday")
+        break;
+
+        case 4: 
+        console.log("Thursday")
+        break;
+
+        case 5: 
+        console.log("Friday")
+        break;
+
+        case 6: 
+        console.log("Saturday")
+        break;
+
+        case 7: 
+        console.log("Sunday")
+        break;
+
+        default:
+        console.log("Invalid choice")    
+
+
+    }
+
+
+    //vending machne
+
+      let choice = 5
+
+    switch(choice){
+
+        case 1: 
+        console.log("Chips")
+        break;
+
+        case 2: 
+        console.log("Choclates")
+        break;
+
+        case 3: 
+        console.log("Cookies")
+        break;
+
+        case 4: 
+        console.log("Cold Drink")
+        break;
+
+        case 5: 
+        console.log("Water")
+        break;
+
+        case 6: 
+        console.log("Soda")
+        break;
+
+
+        default:
+        console.log("Invalid choice")    
+
+
+    }
+    </script>
+</body>
+</html>
