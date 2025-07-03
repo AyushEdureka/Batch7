@@ -1,0 +1,31 @@
+const express =     require('express')
+const {MongoClient} =  require('mongodb')
+
+const app = express();
+const port = 3000; // Address of Backend
+
+const MongoURL = 'mongodb://localhost:27017'; //Address od mongodb Database
+
+
+MongoClient.connect(MongoURL)
+
+.then(client =>{
+    console.log('Connected to MongoDB sucess')
+
+   const  db  = client.db('AmazonUser')
+   const collection = db.collection('PrimeCustomer')
+
+    //Insert a sample document
+    collection.insertMany([ {name:"kala", primeuser:"Yes"} ,  {name:"Chris", primeuser:"Yes"}  ,
+         {name:"Tanisha", primeuser:"Yes"} , {name:"Jonathan", primeuser:"Yes"} 
+        ])
+
+    app.listen(port,()=>{
+        console.log('Backend Running Succesfully')
+    })
+
+})
+
+
+
+.catch(error => console.error('MongoDb connection failed',error))

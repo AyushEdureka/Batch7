@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="myId">Hello guys</p>
+
+
+  <div class="myclass">Class selector - 0</div>
+  <div class="myclass">Class Selector-  1</div>
+
+  <p>Para 1</p>
+  <p>Para 2</p>
+
+  <div class="box">
+    box 
+  </div>
+
+  <div class="box">
+    Sqaure
+  </div>
+
+   <div class="box">
+    Triganle
+  </div>
+
+
+    
+    
+    <script>
+        // Selecting Element/Tag
+        //1. getElementById
+
+       const ele =  document.getElementById("myId"); //Variable ele is storing A paragraph tag by myID
+       console.log(ele)
+       console.log(ele.textContent)
+
+       //2.byClasName
+
+        const xyz =  document.getElementsByClassName("myclass");
+        console.log(xyz)
+        console.log(xyz[1].textContent)
+
+
+        //3.Tag Name
+        const abc  =  document.getElementsByTagName("p")
+        console.log(abc)
+        console.log(abc[0].textContent)
+
+
+        //4 Query Selector: It follows Css Rule
+        //  .className , #Idname
+
+        // const pqr  =    document.querySelector(".box")
+        // console.log(pqr)
+
+
+        // const pqr  =    document.querySelectorAll(".box")
+        // console.log(pqr)
+        // console.log(pqr[2].textContent)
+
+
+
+    </script>
+</body>
+</html>

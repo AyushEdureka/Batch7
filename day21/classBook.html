@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Task:Online Lib System
+
+      //class - keyword book-className
+      
+      class book{
+        //Blueprint
+                 constructor(title,author,yearBlished){
+                        //this: it used to fetch/give the value of parameter
+                    this.title  = title
+                    this.author = author
+                    this.yearBlished = yearBlished
+                 }
+
+         //method        
+         getSumarry(){
+          return 'The Title is ' + this.title + 'Author Name is' + this.author 
+         }
+
+
+      }
+
+      //Object: It is use to Call the methods of class
+
+      //const , var , let variablename = new ClassName
+
+      const book1 = new book('Harry potter','ABC',1987);
+
+      const book2 = new book('Snow White','Frank',1999);
+
+      const book3 = new book('Rich Dad Poor Dad','Benjamin',2000)
+
+
+      //Calling Method: objectname.methodname
+
+     console.log( book1.getSumarry())
+   console.log(book2.getSumarry())
+
+
+
+
+    </script>
+</body>
+</html>

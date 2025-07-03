@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+  #mydiv{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    overflow: auto;
+  }
+
+.content{
+    height: 300px;  
+}
+
+   </style>
+</head>
+<body>
+    <h1>Welcome To Event</h1>
+    <p><strong>Note:</strong>use addEventListener and type of Event</p>
+
+    <button id="mybutton">Click me</button>
+    <input id="myInput" placeholder="Type something to search...."  /><br>
+
+
+    <div id="mydiv">
+         <div class="content">Scroll isnide me</div>
+    </div>
+
+
+    <script>
+        //select the element
+        const button = document.querySelector("#mybutton")
+        const input = document.querySelector("#myInput")
+        const div = document.querySelector('#mydiv')
+
+
+        button.addEventListener("click",function(){
+            alert('Button is clicked')
+        })
+
+
+        //2way : create the function sepatrely
+
+        // function handleKeyDown(event){
+        //     console.log('Key Pressed :' + event.key)
+        // }
+        // input.addEventListener('keydown',handleKeyDown)
+
+
+
+
+        function handleKeyUp(event){
+            console.log('Key released :' + event.key)
+        }
+
+        input.addEventListener('keyup',handleKeyUp)
+
+
+
+         function handleChange(event){
+            console.log('Final output :' + event.target.value)
+        }
+
+        input.addEventListener('change',handleChange)
+
+
+        //Scroll
+
+        function HandleScroll(){
+            console.log('Scrolled')
+        }
+        div.addEventListener('scroll',HandleScroll)
+
+        
+        function handleMouseOver(){
+           const div = document.querySelector('#mydiv')
+           div.style.backgroundColor = 'red'   
+
+        }
+        div.addEventListener('mouseover',handleMouseOver)
+
+
+        function handleMouseOut(){
+                const div = document.querySelector('#mydiv')
+           div.style.backgroundColor = 'yellow'   
+ 
+        }
+        div.addEventListener('mouseout',handleMouseOut)
+    </script>
+</body>
+</html>

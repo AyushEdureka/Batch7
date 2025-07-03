@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     //Global Scope:Living Rooom can be anywhere
+
+     let house = "This is my Whole House"
+
+
+     function enterBedroom(){
+        //Local scope: can ne accessed inside the fucntion
+        let bedroom = "This is my Bedroom"
+
+
+        if(true){
+            //Block Scope
+            let drawer = "this is my drawer"
+
+          console.log(house)
+          console.log(bedroom)
+          console.log(drawer)
+
+        }
+
+    //    console.log(house)
+    //    console.log(bedroom)
+    //    console.log(drawer);  Cannot accses oustide the block
+
+     }
+     enterBedroom()
+
+
+    // console.log(house)
+    // console.log(bedroom); cannot call outside the function
+    // console.log(drawer); cannot call outside the Block
+ 
+
+        </script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       //Old version
+       function add(){
+        console.log(2+3)
+       }
+       add()
+
+
+       //arrow function
+         
+         const abc  = ()=>{
+           console.log('Hii I am Arrow') 
+         }
+         abc()
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var b = "Benjamin"
+        var c = "Guinea"
+        var d = "Have a good day"
+
+        console.log('Hiii  ' + b + ' Welcome to  ' + c + d)
+
+        console.log(` Hiii ${b} Welcome to ${c}  ${d}`)
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //spread operator : it is used to make clone/copy
+
+        //symbol :   ... (3 dots)
+
+        let arr1 = ['Frank','Niger','Tahid','Avi']
+        console.log(arr1)
+
+        let arr2 = ['Ashraf',...arr1,'Lohit']
+
+        console.log(arr2)
+        
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .login-container{
+            background: white;
+            padding: 40px;
+            width: 300px;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1{
+            font-family: 'Billabong';
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        input{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #error-msg{
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Instagram</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Phone no,username or email" >
+          <input type="password" id="password" placeholder="Password">
+          <button type="submit">Log In</button>
+          <p id="error-msg"></p>
+        </form>
+    </div>
+
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit",function(event){
+         event.preventDefault();  
+
+         const username = document.getElementById("username").value
+         const password = document.getElementById("password").value
+         const errorMsg = document.getElementById("error-msg");
+
+         //Verfication
+
+         if(username === "" || password === "" ){
+            errorMsg.textContent = "Both Filed are required"
+         }else{
+            errorMsg.textContent = ""
+            alert("Login Sucessful")
+         }
+
+        })
+    </script>
+</body>
+</html>

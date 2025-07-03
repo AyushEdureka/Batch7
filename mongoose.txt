@@ -1,0 +1,47 @@
+//Step 1 : Import the module which you have install
+const express = require('express')
+const mongoose    =  require('mongoose')
+
+const app = express()
+const port = 3000; //Address of Backend
+
+app.use(express.json())
+
+//Step 2: Connect your Database
+mongoose.connect("mongodb://localhost:27017/NetflixEmpolyee")
+
+.then(()=>console.log('Conneccted to Mongodb'))
+.catch(err=>console.error('Failed to connect',err))
+
+
+//Define SCHEMA/Blueprint:Of the data which YOu want to store
+
+const EmplyeeSchema =   new   mongoose.Schema({
+
+    EmployeeName:String,
+    EmployeeID:Number,
+    EmployeePost:String
+
+
+   })
+
+
+//Create A Model
+   
+const Employee =  mongoose.model('Employee',EmplyeeSchema)
+
+//
+app.post("/login",async (req,res)=>{
+    const newEmployee  = new Employee(req.body)
+    await newEmployee.save()
+    res.send("Emplyee Added succesfully")
+})   
+
+
+app.get("/Employee",async(req,res)=>{
+    const Employees = await Employee.find();
+    res.json(Employees)
+})
+
+
+app.listen(3000,()=>console.log("Server running on port"))

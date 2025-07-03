@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix-style Movie Slider</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .movie-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .movie-row {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .movie {
+      flex: 0 0 auto;
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 40%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slider-left {
+      left: 10px;
+    }
+
+    .slider-right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- <div class="container mt-5">
+  <h3 class="text-white bg-dark p-2 rounded">Trending Movies</h3>
+  <div class="movie-container bg-dark p-3 rounded">
+    <button class="slider-btn slider-left" onclick="scrollLeft()">‹</button>
+    <button class="slider-btn slider-right" onclick="scrollRight()">›</button>
+
+    <div class="movie-row" id="movieRow">
+      <div class="movie"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEACwsLCwvLDI3NzJFS0JLRWZeVlZeZptvd293b5vrk6yTk6yT69D8zb/N/ND///////////////////////////8BLCwsLC8sMjc3MkVLQktFZl5WVl5mm293b3dvm+uTrJOTrJPr0PzNv8380P/////////////////////////////CABEIAQ4AtAMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAABAgMABAUG/9oACAEBAAAAAEGjLZn9Lv3kcqqN0nW870ZGMcXr6ovy+eiKOlhXzu3aUGZ7GA9TjkijoYU87szSizvfg9Dml6PMibo6Yjh7OhuCT0fo8rpnD2eVEF+6XPxdHe/mxpbqt4qpvoOPnRejvjz8XVXQlS/dbxqz5vd5+SSuwbloMdalknUGyS5wuGQ4sWpCyUl1inNysxQTvPa6tMbN6iS5OYVAlXSLWh2285l9Dqlzz5MNgTMu694lzjv7V8+vmkikWaeLz9SDc9b9Z8+vnasVxGBI9XhvP0nG89+FWaWwZdj2x6LWKLxV402GxG2boa62gtYLOTBdtsc3bCjvgTyziy4HFXW5FWZGV9xJsNiMy2qXlTA1lyoCBiQ+60R3K0yDmQEYOUslmjba6DIkRSVJ2Z0bo5arSPTzlhOc+k8zp68uPerydfl+l5/pc/X5+6J+b2blF+7irzdObntG7IWM+ar8pORsy4nZaqcNmMc2LHZly686oumNgCAlBZUwZdg52CupEmBoWkoBqGOCYqEOOyttlL0zaeXDFsdsQFKNqGeVQ2cnbYBUxJKDbVRKBayLadUwxGBxXbbbbbY4gsg2OfbbZV22c//EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/9oACgICEAMQAAAAnPUqJtpjWDNKzqrJZvPTXLWEztNOe00lm2ri4ucbTec6ozubzrWLjeEAJcd50RLz68JbFlE5+i6JhevmUSbQ597YuTpwCVRMeiVJd8tcyiaSWdM1lqzfJBQm5M6A3iwJqFSaQmtYoZxsrKlgjcNSAJQgtLEKJouQllLCkACWDQLIAqAKEAAWP//EADUQAAICAQMBBgQFAwQDAAAAAAECABEDEiExQQQQE1FhcSAiMlIzQnKBkWKhsRQjMHM0gsH/2gAIAQEAAT8AXGWnHdk4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" alt="Movie 1"></div>
+      <div class="movie"><img src="" alt="Movie 2"></div>
+      <div class="movie"><img src="" alt="Movie 3"></div>
+      <div class="movie"><img src="" alt="Movie 4"></div>
+      <div class="movie"><img src="" alt="Movie 5"></div>
+      <div class="movie"><img src="" alt="Movie 6"></div>
+      <div class="movie"><img src="" alt="Movie 7"></div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="parenet">
+
+    <p class="d-inline-flex gap-1">
+  
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+
+<p class="d-inline-flex gap-1">
+  
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Niger" aria-expanded="false" aria-controls="collapseExample">
+  what is netflix?
+  </button>
+</p>
+<div class="collapse" id="Niger">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+</div>
+<script>
+  const row = document.getElementById("movieRow");
+
+  function scrollLeft() {
+    row.scrollBy({ left: -220, behavior: 'smooth' });
+  }
+
+  function scrollRight() {
+    row.scrollBy({ left: 220, behavior: 'smooth' });
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<style>
+    .carousel-inner img{
+        height: 400px;
+        object-fit: cover;
+    }
+</style>
+
+
+</head>
+<body>
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>  
+</div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://plus.unsplash.com/premium_photo-1687686677116-40e822dfbc51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZGN1dHN8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1727580674761-3aae55f53cad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZGN1dHN8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1677751177812-eef0b47b888d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZGN1dHN8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1677751177812-eef0b47b888d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZGN1dHN8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Task:Online Lib System
+
+      //class - keyword book-className
+      
+      class book{
+        //Blueprint
+                 constructor(title,author,yearBlished){
+                        //this: it used to fetch/give the value of parameter
+                    this.title  = title
+                    this.author = author
+                    this.yearBlished = yearBlished
+                 }
+
+         //method        
+         getSumarry(){
+          return 'The Title is ' + this.title + 'Author Name is' + this.author 
+         }
+
+
+      }
+
+      //Object: It is use to Call the methods of class
+
+      //const , var , let variablename = new ClassName
+
+      const book1 = new book('Harry potter','ABC',1987);
+
+      const book2 = new book('Snow White','Frank',1999);
+
+      const book3 = new book('Rich Dad Poor Dad','Benjamin',2000)
+
+
+      //Calling Method: objectname.methodname
+
+     console.log( book1.getSumarry())
+   console.log(book2.getSumarry())
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+----------------------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Deposit,Withdrawl,accBlanace Basic Task - method()
+
+        class BankAcc{
+
+                 constructor(accno,name,balance){
+                    this.accno = accno;
+                    this.name  = name;
+                    this.balance = balance;
+
+                 }
+
+          //
+          deposit(accno,amount){
+          //100 = 100 + 50 :  150
+          this.balance+= amount;   //balance + amount
+          console.log('Hii ' + this.name + ', ' + amount + ' Has been deposited in your Account')
+
+
+          } 
+          
+          accbalance(){
+             console.log(this.name + '  Account Balance is  ' + this.balance )
+          }
+
+
+          withdrawl(accno,amount){
+           //100 - 50 = 50 //decrease
+           if(this.balance>=amount){
+               this.balance-=amount;
+                console.log('Hii ' + this.name + ',' + amount + 'Has been withdrawk in your Account')
+
+           }else{
+            console.log('Sorry Insuffiecent Fund')
+           }
+
+          }
+
+
+
+        }
+
+
+        //Object
+
+        let acc1 = new BankAcc(123,'Frank',0)
+
+        acc1.accbalance()
+        acc1.withdrawl(123,500)
+        acc1.deposit(123,1000)
+        acc1.accbalance()
+        acc1.withdrawl(123,357.25)
+        acc1.accbalance()
+
+        let acc2 = new BankAcc(111,'Hussain',100)
+        acc2.accbalance()
+    </script>
+</body>
+</html>

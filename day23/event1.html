@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybutton">Add to Cart</button>
+    <p id="message"></p>
+
+
+    <script>
+   //1. Select the element where you wnat to perform action
+   const button = document.getElementById("mybutton")
+   const message = document.getElementById("message")
+
+   //2. Always Use " AddEvenetListner " to listen to Event/Action
+
+    button.addEventListener("dblclick",function(){
+        message.textContent= "Product Added to cart"
+    });
+
+
+    </script>
+</body>
+</html>

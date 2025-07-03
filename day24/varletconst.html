@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     //Global Scope:Living Rooom can be anywhere
+
+     let house = "This is my Whole House"
+
+
+     function enterBedroom(){
+        //Local scope: can ne accessed inside the fucntion
+        let bedroom = "This is my Bedroom"
+
+
+        if(true){
+            //Block Scope
+            let drawer = "this is my drawer"
+
+          console.log(house)
+          console.log(bedroom)
+          console.log(drawer)
+
+        }
+
+    //    console.log(house)
+    //    console.log(bedroom)
+    //    console.log(drawer);  Cannot accses oustide the block
+
+     }
+     enterBedroom()
+
+
+    // console.log(house)
+    // console.log(bedroom); cannot call outside the function
+    // console.log(drawer); cannot call outside the Block
+ 
+
+        </script>
+
+</body>
+</html>
