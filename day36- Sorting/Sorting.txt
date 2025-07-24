@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+      //SORTING: TO ARRANGE THE DATA IN GIVEN ORDER
+
+      //Bubble SORT
+      //Step 1:  Compare the first two data/elemnt
+      //Step 2 : If first element is bigger than second element 
+      //Step 3 : Condition - > SWAP IT 
+      //Step 4: Continue The Process in Loop Until it is sorted
+
+      function BubbleSort(arr){
+
+        let n = arr.length;
+        let swapped 
+
+        do{
+          swapped=false;
+             for(let i = 0; i < n - 1 ; i++){
+                   
+                if(arr[i] > arr[i+1]){
+                    let temp = arr[i]
+                    arr[i] = arr[i+1]
+                    arr[i+1] = temp
+                    swapped=true;
+                }
+
+             }
+
+        }while(swapped)
+        return arr;
+
+      }
+
+    console.log(BubbleSort([100,902,13,10,2,23,7,3,5,1,666]))
+
+
+
+   
+
+       
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+     
+     function sortContact(contacts){
+
+         return  contacts.sort(  (a,b)=> a.name.localeCompare(b.name))
+
+     }
+
+     let contacts = [
+        {name:"Aditya",lastMessage:"hII"},
+        {name:"Yahir",lastMessage:"Do we have 1 on 1 session"},
+        {name:"Leonard",lastMessage:"How are you?"},
+        {name:"Aabhi",lastMessage:"Schedule Session on Friday"},
+        {name:"aaadarsh",lastMessage:"hII"},
+
+     ]
+
+     console.log(sortContact(contacts))
+
+
+    </script>
+</body>
+</html>

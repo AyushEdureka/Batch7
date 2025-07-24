@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // async Function is used to make our program asynchronouse
+
+        // await: It will handle the waiting
+
+        //fetch:  It is used to get the data from API
+
+
+        async function fetchData(){
+
+            const data =     await  fetch("https://randomuser.me/api")
+           
+            const result    = await data.json()
+
+            console.log(2+2)
+
+            console.log(result)
+
+        }
+        fetchData()
+
+
+        function add(){
+            console.log(5+5)
+        }
+        add()
+    </script>
+</body>
+</html>

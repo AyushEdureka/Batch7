@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Example : Baking Cookies and do other task at the same timr
+
+        //Step 1: Setting the time of microOven to bake cookies
+
+        function setTimer(callback){
+         console.log("Baking  Cookies in Oven......")
+
+
+         //setp 2 : Wait for 10 mins
+           
+         setTimeout(function(){
+              console.log("Cookies are ready!")
+              callback();  //Keyword : To call the callback Function
+         },10000)
+       
+
+        }
+
+
+        function takeOutCookies(){
+            console.log("Taking Cookies out of Oven")
+        }
+
+
+        setTimer(takeOutCookies)
+
+
+         console.log("Doing Other Task while Cookies are Baking")
+
+         function add(){
+            console.log(2+2)
+         }
+         add()
+    </script>
+</body>
+</html>

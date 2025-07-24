@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Place A order: MAIN TASK
+        //DOING Other Task: Async process
+        //Resolve("Delivered")   Reject("Cancelled")
+
+        function orderPizza(name){
+
+         return new Promise((resolve,reject)=>{
+
+            let PizzaReady = false;
+
+            console.log("Pizza For " + name )
+
+
+            setTimeout(()=>{
+                if(PizzaReady){
+                    resolve("Pizzza Delivered")
+                }
+                else{
+                    reject("Order Cancelled")
+                }
+            },5000)
+
+         })
+
+        }
+
+        orderPizza("Yahir")
+
+        .then(message=>{
+            console.log(message)
+        })
+
+        .catch(error=>{
+            console.log(error)
+        })
+
+
+        console.log("Waiting for piiza while doing other task")
+
+
+        function add(){
+            console.log(2+2)
+        }
+        add()
+
+
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+      //1.Cookie will store small Type data(username,emal..)  
+
+     //2.Cookies have expiry: Deleted after expiry date
+
+     //syntax : Create a cooki : document.cookie = 
+
+    //  document.cookie = "username:Yahir;expires= Wed,15 July 2025 00:00:00 UTC;"
+
+    //  let abc = document.cookie;
+    //  console.log(abc)
+
+    
+      document.cookie = "email=xyz@gamil.com;expires=Thu 01 Jan 2025 00:00:00 UTC;"
+
+      
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Local Storage: Act like permanent Storage
+        //Example : Cart Product
+
+        //Method - setItem(key,value)
+
+        localStorage.setItem("Greetings","Hello Guys")
+
+        localStorage.setItem("Cart","Iphone")
+        localStorage.removeItem("Cart");  //keyName
+
+        localStorage.clear();  //Cleae the local storage
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Session Storage: DATA WILL STORE TILL MY SESSION IS ACTIVE
+
+        sessionStorage.setItem("Cart","Iphone")
+        sessionStorage.removeItem("Cart")
+        
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //synatx
+      //  setTimeout(function,Time)
+      // 1000: 1 sec
+
+      setTimeout(()=>{
+        console.log("This will run after 5 sec")
+      },5000)
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //setInterbal = Break And perfomr thr task
+
+    //    let xyz =   setInterval(() => {
+    //         console.log("This runs after every 5 sec")
+    //     }, 5000);
+
+    //     clearInterval(xyz)
+
+   
+    // AnonyMous fucntion: A Function without Name
+
+
+    let greet = function(){
+        console.log("Hello guys")
+       }
+       greet()
+        //VaribaleNameFucntionSymbol
+    </script>
+</body>
+</html>

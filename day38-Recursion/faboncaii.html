@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+function Fiboncaii(num){
+
+    if(num<2){
+        return num  ;  
+    } else{
+           return Fiboncaii(num - 1) + Fiboncaii(num - 2)
+    }
+
+}
+
+let n = Number(prompt("Enter the Limit"))
+
+  if(n<=0){
+    console.log('Please Enter Postive Integer')
+  }else if(n == 1){
+    console.log(0,1)
+  }else{
+    for(let i = 0; i<n;i++){
+        console.log(Fiboncaii(i))
+    }
+
+  }
+
+
+
+</script>
+
+</body>
+</html>

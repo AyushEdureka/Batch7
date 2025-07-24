@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+//Linked List - NODE(Box) is divide into 2 part
+//part 1: DATA
+//part 2 : Address of next Node(box)
+
+
+
+// class Node{
+
+//       constructor(data){
+//          this.data = data;
+//          this.next = null
+//       }
+// }
+
+// //Object  - new ClassNAme
+
+// let node1 = new Node("Box 1")
+// let node2 = new Node("Box 2")
+// let node3 = new Node("Box 3")
+
+// node1.next = node2  //Connection
+// node2.next = node3
+
+// console.log(node1.next.data)
+
+// console.log(node3.next.data)
+
+
+//Example:Playlist --> Next song
+
+class Node{
+
+    constructor(title){
+         this.title=title;
+         this.next = null;
+    }
+}
+
+//Note: To Acces create object : new ClassANmee
+
+let song1 = new Node("song1")
+let song2 = new Node("Pal pal")
+let song3 = new Node("Bambi")
+
+//Connection
+song1.next = song2
+song2.next = song3
+
+console.log(song2.next.title); 
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Set - BOX WHICH STORES ONLY UNQUIE DATA : NO DUPLICATIONS
+
+      let strcikers = new Set()
+
+      //Add theData inside set
+ 
+       strcikers.add("Unicorn")
+       strcikers.add("Dragon Ballz")
+       strcikers.add("Car Collection")
+       strcikers.add("Unicorn")
+       strcikers.add("XYZ")
+
+       strcikers.delete("Unicorn")
+
+       console.log(strcikers.has("PQR"))
+
+      // strcikers.clear()
+
+       
+    </script>
+</body>
+</html>

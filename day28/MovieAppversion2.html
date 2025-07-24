@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        .movie{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin:10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .movie img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Details</h1>
+   <input type="text" id="movieInput" placeholder="Enter your Movie" />
+   <button onclick="handlesearch()">Search</button>   
+
+   <div id="movieContainer"></div>
+
+
+   <script>
+     async   function serachMovie(movieName){
+
+        let url = `https://www.omdbapi.com/?s=${movieName}&apikey=a6606658`
+
+
+          try{
+             const response =  await  fetch(url)
+             const data =      await response.json()
+               
+            const movieContainer  =   document.getElementById("movieContainer")
+            movieContainer.innerHTML = " "
+
+            if(data.Response === "True"){
+              console.log(data)
+
+             data.Search.forEach(movie=>{
+                
+                movieContainer.innerHTML +=`
+                 <div class="movie">
+                 <img src = ${movie.Poster !== "N/A"  ? movie.Poster: "https://via.placeholder.com/100"}
+                 <div>
+                 <div>
+                    <h3>${movie.Title}<h3>
+                     <p>${movie.Year} </p>
+                 </div>       
+                `
+             })
+
+
+            }else{
+                movieContainer.innerHTML = "<p>No Movie Found</p>"
+            }
+
+          }catch(error){
+               console.log(error)
+          }
+
+
+
+       }
+
+
+       function handlesearch(){
+        const movieName =  document.getElementById("movieInput").value
+          if(movieName){
+             serachMovie(movieName)
+          }
+       }
+
+       function add(){
+        console.log(2+2)
+       }
+       add()
+
+       function sub(){
+        console.log(2-2)
+       }
+       sub()
+   </script>
+</body>
+</html>

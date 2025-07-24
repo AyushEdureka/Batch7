@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // async Function is used to make our program asynchronouse
+
+        // await: It will handle the waiting
+
+        //fetch:  It is used to get the data from API
+
+
+        async function fetchData(){
+
+            const data =     await  fetch("https://randomuser.me/api")
+           
+            const result    = await data.json()
+
+            console.log(2+2)
+
+            console.log(result)
+
+        }
+        fetchData()
+
+
+        function add(){
+            console.log(5+5)
+        }
+        add()
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        async function getMovie(movieName){
+
+            let url = `https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+
+
+            try{
+
+              let response = await fetch(url)
+
+              let data = await response.json()
+
+           //   console.log(data)
+
+          if(data.Response == "True"){
+            // console.log(data)
+
+           console.log(`Title of : ${data.Title}`)
+           console.log(`Plot of : ${data.Plot}`)
+           console.log(`Year of : ${data.Year}`)
+           console.log(`Poster of : ${data.Poster}`)
+
+          }else{
+            console.log("Moview Not Found")
+          }
+
+
+
+
+            }catch(error){
+                  console.log("Error fetching movie" ,error)
+            }
+
+
+
+        }   
+        getMovie("dfjhajfhajfahj")     
+ 
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Movie Details</h1>
+    <div class="movie" id="movieContainer"></div>
+
+
+     <script>
+
+        async function getMovie(movieName){
+
+            let url = `https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+
+
+            try{
+
+              let response = await fetch(url)
+
+              let data = await response.json()
+
+           //   console.log(data)
+
+          if(data.Response == "True"){
+            // console.log(data)
+            const movieContainer =  document.getElementById("movieContainer")
+            movieContainer.innerHTML = `
+            <h1>${data.Title}</h1>
+            <p><strong>Year: ${data.Year}</strong></p>
+            <p><strong>Plot: ${data.Plot}</strong></p>
+            <img src=${data.Poster}>
+            
+            `
+
+
+          }else{
+            console.log("Moview Not Found")
+          }
+
+
+
+
+            }catch(error){
+                  console.log("Error fetching movie" ,error)
+            }
+
+
+
+        }   
+        getMovie("Cobra kai")     
+ 
+
+
+
+
+    </script>
+</body>
+</html>

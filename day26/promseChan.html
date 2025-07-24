@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+let myPromise  = new Promise((resolve,reject)=>{
+
+       setTimeout(()=>resolve(5),1000)
+
+
+})
+
+myPromise
+
+.then(result=>{
+ console.log(result)  //5
+ return result*2    //becomes 10
+})
+
+.then(result=>{
+    console.log(result) //10
+    return result+2
+})
+
+.then(result=>{
+    console.log(result)
+})
+
+</script>
+
+</body>
+</html>

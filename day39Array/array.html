@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //Array: It stores Mutiple data at the same time along with diff data type in JS Array
+
+     //Index No always start with 0
+
+     //Length = Total No of Data
+
+     //To do List: Task
+
+     let tasks = []  //Empty Array
+
+      tasks = ["Buy Grocies","Walk with Dog","Workout"]
+
+      //Adding Data
+
+      tasks.push("Cleaning");  //Push help us to add data at the task
+
+      tasks.unshift("Brush Your Teeth");  //Add data at beginning 
+
+      //Remove the data from array
+
+      tasks.pop()   //Remove the last data
+
+      tasks.shift()
+
+      console.log(tasks)
+
+
+      //Slice: It is used to divide the array or cut the array into slices
+
+      let firstTwoTask = tasks.slice(0,3);  //(Staring Index, The Next Index Number)
+      console.log(firstTwoTask)
+    
+
+      //SPLICE: IT helps you to add the data Anyhwere(Middle)
+
+      tasks.splice(2,0,"New Task")
+           //splice(Index No for Newdata, Code 0: Previou data will not delete,1-Deleted,"Value of new data")
+      console.log(tasks)
+
+
+      //FOREACH - LOOP HELP US TO PRINT THE DATA OF ARRAY 
+    //   array.forEach(element => {
+        
+    //   });
+
+      tasks.forEach(function(somevaribale){
+        console.log(somevaribale)
+      })
+
+      //MAPPING- Create a new Array by Transforming each item in your original array
+
+      let importantTask = tasks.map(function(task){
+             return "Important :" + task
+      })
+      console.log(importantTask)
+
+      //Filter: To pIck One
+
+    let Picking =    tasks.filter(function(abc){
+             return abc.includes("Walk with Dog")
+        })
+        console.log(Picking)
+
+
+
+    //FIND - To search The first Data or item
+
+       let Finding = tasks.find(function(xyz){
+        return xyz.includes("o")
+       })
+       console.log(Finding)
+
+
+       //Find the Minimum and Max value from Array
+
+       let height = [165,170,163,171,150]
+
+       //Math object , Spread Operator(...)- Hint
+
+
+       let MaxHeight = Math.max(...height)
+
+       let MinHeight = Math.min(...height)
+
+       console.log(...height)
+
+       console.log("Minimum Height is"+ MinHeight )
+       console.log("Maxium Height is"+ MaxHeight )
+
+    
+
+
+
+
+    </script>
+</body>
+</html>

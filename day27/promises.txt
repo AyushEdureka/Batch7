@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>            // new Promsie(resolve , reject)
+         let Mypromise = new Promise(function(resolve,reject){
+
+             if(/*condtion */false){
+                       resolve("Sucesss")
+             }
+             else{
+                      reject("failure")
+             }
+
+        })
+
+     Mypromise
+     
+     .then( result=>{
+        console.log(result)
+     }   )
+
+     .catch(error=>{
+        console.log(error)
+     })
+
+        // .then() - Resolve Part Output
+        //  .catch()- Reject Part OutPut
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Place A order: MAIN TASK
+        //DOING Other Task: Async process
+        //Resolve("Delivered")   Reject("Cancelled")
+
+        function orderPizza(name){
+
+         return new Promise((resolve,reject)=>{
+
+            let PizzaReady = false;
+
+            console.log("Pizza For " + name )
+
+
+            setTimeout(()=>{
+                if(PizzaReady){
+                    resolve("Pizzza Delivered")
+                }
+                else{
+                    reject("Order Cancelled")
+                }
+            },5000)
+
+         })
+
+        }
+
+        orderPizza("Yahir")
+
+        .then(message=>{
+            console.log(message)
+        })
+
+        .catch(error=>{
+            console.log(error)
+        })
+
+
+        console.log("Waiting for piiza while doing other task")
+
+
+        function add(){
+            console.log(2+2)
+        }
+        add()
+
+
+
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchData Done")
+                    resolve("A")
+                },500)
+            })
+        }
+
+
+          function fetchMoreData(a){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchMOreDATA Done")
+                    resolve("B")
+                },500)
+            })
+        }
+
+         function fetchEvenMoreData(b){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchEvenMoreData Done")
+                    resolve("C")
+                },500)
+            })
+        }
+
+
+            function fetchEvenEvenMoreData(c){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchEvenEvEnMoreData Done")
+                    resolve("D")
+                },500)
+            })
+        }
+
+
+            function fetchFinalData(d){
+             return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchFinalData Done")
+                    resolve("Final Data Recived")
+                },500)
+            })
+        }
+
+        fetchData()
+        .then(a=>fetchMoreData(a))
+        .then(b=>fetchEvenMoreData(b))
+        .then(c=>fetchEvenEvenMoreData(c))
+        .then(d=>fetchFinalData(d))
+        .then(finalData=>{
+            console.log(finalData)
+        })
+
+        .catch(error=>console.log(error))
+    </script>
+
+</body>
+</html>

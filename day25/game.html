@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background: #f7f7f7;
+        }
+
+        .grid{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+
+        .hole{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #333;
+            background-color: #ccc;
+            box-sizing: border-box;
+            position: relative;
+            cursor: pointer;
+            border-radius: 50%;
+            
+            
+        }
+
+        .mole{
+            background-color: brown;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Whack-a-Mole!</h1>
+    <p>⌛Time Left:<span id="time-left">30</span></p>
+    <p>🏆 Score: <span id="score">0</span></p>
+    <div class="grid">
+        <div class="hole" id="1"></div>
+        <div class="hole" id="2"></div>
+        <div class="hole" id="3"></div>
+        <div class="hole" id="4"></div>
+        <div class="hole" id="5"></div>
+        <div class="hole" id="6"></div>
+        <div class="hole" id="7"></div>
+        <div class="hole" id="8"></div>
+        <div class="hole" id="9"></div>
+    </div>
+
+    <script>
+     const holes =  document.querySelectorAll('.hole')
+     const scoreDisplay =   document.getElementById('score')
+     const timeLeftDisplay =   document.getElementById('time-left')
+
+     let score =0;
+     let timeLeft = 30
+     let molePostion;
+     let timerId;
+
+     //Logic For Randome Hole
+     function randomHole(){
+
+        holes.forEach(function(hole){
+                hole.classList.remove('mole')
+        })
+
+
+        const randomeIndex =  Math.floor(Math.random()*holes.length)
+        let randomHole = holes[randomeIndex]
+
+        randomHole.classList.add('mole')
+        molePostion =randomHole.id;
+
+
+
+         holes.forEach(hole => {
+            hole.addEventListener('click',()=>{
+                if(hole.id === molePostion){
+                    score++;
+                    scoreDisplay.textContent = score;
+                    molePostion=null;
+                }
+            })
+         })
+
+     };
+
+     function moveMole(){
+        timerId = setInterval(randomHole , 700)
+     }
+
+
+     function countDown(){
+        let timer = setInterval(()=>{
+            timeLeft--;
+            timeLeftDisplay.textContent = timeLeft;
+
+            if(timeLeft === 0){
+                clearInterval(timer)
+                clearInterval(timerId)
+                alert(`Game over Your Score is :  ${score}`)
+            }
+        }, 1000)
+     }
+
+     moveMole()
+     countDown()
+    </script>
+</body>
+</html>

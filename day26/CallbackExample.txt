@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. Task : Make sanwhich-10 sec
+        function Sanwhich(){
+            console.log("Step 1.Get Bread")
+            console.log("Step 2.Apply Butter")
+            console.log("Step 3.Toppings")
+            console.log("Step 4.Cover with another Bread")
+        }
+        Sanwhich()
+
+        //Task2: Do Homework- 2 sec
+        function DoHomeWokr(subject){
+            
+            console.log(`Homewokr for ${subject}`)
+        }
+        DoHomeWokr("Math")
+        </script>
+</body>
+</html>
+
+
+------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Task1 : 10 sec Make Coffee
+    
+     function startTask(){  //Make Task
+
+        console.log("Step 1 : Start Boiling Water (this will take 5 sec )")
+
+        //Syntax : setTimeout(function(){},time) // 1000-sec
+
+        setTimeout(()=>{
+                console.log("Step 2:Water is Ready")
+        },5000)
+
+        console.log("Step 3: Doing Other task while Coffee is Brewing")
+
+     }
+     startTask()
+
+     function SecondTask(){
+        console.log("Hii Everyone")
+     }
+     SecondTask()
+          
+
+
+    </script>
+</body>
+</html>
+
+
+--------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Welcome to Callback</h1>
+    <script>
+        
+      //Callback= 1.CallBack is the Function AND 2.It is Passes As PARAMETER into ANOTHER FUNCTION
+
+          function DoHomeWork(subject,callback){
+
+           console.log(`Doing a Homework for ${subject}`)
+
+           setTimeout(()=>{
+            console.log('I am Timer')
+           },3000)
+           
+           callback()
+
+          }
+          DoHomeWork("Math",function(){
+            console.log("Home Wokr Done")
+          })
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(name,callback){
+
+
+         
+      console.log(`hiii ${name} How are you Doing?`)
+      callback()   
+
+        }
+        greet("Yahir",function(){
+            console.log("Callback function is called")
+        })
+    </script>
+</body>
+</html>
+
+
+
+----------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Example : Baking Cookies and do other task at the same timr
+
+        //Step 1: Setting the time of microOven to bake cookies
+
+        function setTimer(callback){
+         console.log("Baking  Cookies in Oven......")
+
+
+         //setp 2 : Wait for 10 mins
+           
+         setTimeout(function(){
+              console.log("Cookies are ready!")
+              callback();  //Keyword : To call the callback Function
+         },10000)
+       
+
+        }
+
+
+        function takeOutCookies(){
+            console.log("Taking Cookies out of Oven")
+        }
+
+
+        setTimer(takeOutCookies)
+
+
+         console.log("Doing Other Task while Cookies are Baking")
+
+         function add(){
+            console.log(2+2)
+         }
+         add()
+    </script>
+</body>
+</html>

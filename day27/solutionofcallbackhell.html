@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchData Done")
+                    resolve("A")
+                },500)
+            })
+        }
+
+
+          function fetchMoreData(a){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchMOreDATA Done")
+                    resolve("B")
+                },500)
+            })
+        }
+
+         function fetchEvenMoreData(b){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchEvenMoreData Done")
+                    resolve("C")
+                },500)
+            })
+        }
+
+
+            function fetchEvenEvenMoreData(c){
+            return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchEvenEvEnMoreData Done")
+                    resolve("D")
+                },500)
+            })
+        }
+
+
+            function fetchFinalData(d){
+             return new Promise(resolve =>{
+                setTimeout(()=>{
+                    console.log("fetchFinalData Done")
+                    resolve("Final Data Recived")
+                },500)
+            })
+        }
+
+        fetchData()
+        .then(a=>fetchMoreData(a))
+        .then(b=>fetchEvenMoreData(b))
+        .then(c=>fetchEvenEvenMoreData(c))
+        .then(d=>fetchFinalData(d))
+        .then(finalData=>{
+            console.log(finalData)
+        })
+
+        .catch(error=>console.log(error))
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      var a =20
+      var b = 30
+
+      const p = a>b ? "A is greater" : "B is greater"
+
+      console.log(p)
+
+
+        </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var a =20
+          var b = 30
+
+      const c = y>b ? "A is greater" : "B is greater"
+         
+      debugger;
+      console.log(c)
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //   Normal Function
+
+    //    function mul(a,b){
+    //     return a*b;
+    //    }
+    //    console.log(mul(2,3))
+
+    //Function Curry : More than one function nested
+
+       function mutiply(a){
+          return function(b){
+            return a*b;
+       }
+       }
+
+    console.log( mutiply(5)(2))
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(this)
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("Start boiling water - 1")
+
+        // setTimeout(()=>{
+        //        console.log("Water is sec")
+        // },3000)
+
+        // console.log("Chopping Vegertable")
+
+
+
+          console.log("Start")
+
+          setTimeout(()=>{
+               console.log("Middle")
+          },0)
+
+        console.log("End")
+    </script>
+</body>
+</html>

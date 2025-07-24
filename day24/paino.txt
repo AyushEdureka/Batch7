@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {text-align: center; font-family: Arial, Helvetica, sans-serif; 
+           display:flex;
+           align-items: center;    
+           flex-direction: column;    
+        }
+        
+        .paino{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin-top: 50px;
+             width: 500px;
+             height:250px ;
+             background-color: black;
+        }
+
+        .key{
+            width: 60px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 5px;
+            background: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .active{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Virtual Piano- Press Keys A S D F G H J</h1>
+    <div class="paino">
+        <div class="key" data-key="A">A</div>
+        <div class="key" data-key="S">S</div>
+        <div class="key" data-key="D">D</div>
+        <div class="key" data-key="F">F</div>
+        <div class="key" data-key="G">G</div>
+        <div class="key" data-key="H">H</div>
+        <div class="key" data-key="J">J</div>
+    </div>
+
+    <script>
+  let sounds={
+    A: new Audio ("https://www.soundjay.com/buttons/sounds/button-1.mp3"),
+    S: new Audio ("https://www.soundjay.com/buttons/sounds/button-2.mp3"),
+    D: new Audio ("g6-82013.mp3"),
+    F: new Audio ("b6-82017.mp3"),
+    G: new Audio ("a6-82015.mp3"),
+    H: new Audio ("c6-102822.mp3"),
+    J: new Audio ("f6-102819.mp3"),
+  };
+
+  //Function to play sound and also Highlight key
+  function playSound(event){
+        let key = event.key.toUpperCase(); //Convert to uppercase
+        let keyDiv = document.querySelector(`.key[data-key="${key}"]`)
+
+        if(keyDiv && sounds[key]){
+            sounds[key].currentTime = 0; //Reset Sound
+            sounds[key].play()
+            keyDiv.classList.add("active")
+        }
+  }
+
+  //Function to remove HighLight
+  function removeHighLight(event){
+    let key = event.key.toUpperCase(); //Convert to uppercase
+    let keyDiv = document.querySelector(`.key[data-key="${key}"]`)
+    if(keyDiv) keyDiv.classList.remove("active")    
+  }
+
+  //EVENT LISTNER
+  document.addEventListener("keydown",playSound)
+  document.addEventListener("keyup",removeHighLight)
+
+        </script>
+</body>
+</html>

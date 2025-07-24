@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+let myPromise  = new Promise((resolve,reject)=>{
+
+       setTimeout(()=>resolve(5),1000)
+
+
+})
+
+myPromise
+
+.then(result=>{
+ console.log(result)  //5
+ return result*2    //becomes 10
+})
+
+.then(result=>{
+    console.log(result) //10
+    return result+2
+})
+
+.then(result=>{
+    console.log(result)
+})
+
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch("API ADDRESS"): fetch data the From API
+        //1. Convert the response in JSON Format
+                                    //  javascript Object Notation
+
+        //2.                            
+
+        fetch("https://randomuse.me/api")
+
+        .then(response=>response.json())
+         .then(data=>console.log(data.results))
+
+
+        .catch(error=>console.log("Error Connecting",error))
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random Dog Image Generator</h1>
+    <button onclick="fetchDogImage()">Get Dog Image</button>
+    <br>
+    <br>
+     
+    <img id="dogImage"  src="" alt="Dog Will Appear" height="200" width="200" >
+
+    <script>
+        function fetchDogImage(){
+            //STep 1 Fetch the data from Api
+            fetch("https://dog.ceo/api/breeds/image/random")
+
+            .then(response=>response.json())
+            .then(data=>{
+                document.getElementById("dogImage").src = data.message
+               // console.log(data.status)
+            })
+
+            .catch(error=>console.log("Error",error))
+        }
+    </script>
+</body>
+</html>

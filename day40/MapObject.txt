@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+ function TowerOfHanoi(n,Src_rod,Des_rod,aux_rod){
+
+    if(n==0){
+       return;
+    }
+
+    //Formula- Logic
+
+    TowerOfHanoi(n-1,Src_rod,aux_rod,Des_rod)
+    console.log(`Move Disk ${n}  from ${Src_rod} ----> ${Des_rod}`)
+
+    TowerOfHanoi(n-1,aux_rod,Des_rod,Src_rod)
+
+ }
+
+ var n=6  //N of Disk
+ TowerOfHanoi(n,'A','C','B')
+
+
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        const fruits = new Map()
+
+        fruits.set("Mango",20)
+        fruits.set("Guava",40)
+        fruits.set("Kiwi",60)
+        fruits.set("Orange",80)
+
+        console.log(`Value of Kiwi is ${fruits.get("Kiwi")}`)
+
+        console.log(`Keys Of Fruits are :`)
+        console.log( fruits.keys() )
+
+         console.log(`Values Of Fruits are :`)
+        console.log( fruits.values() )
+
+        console.log(`Fruits has Apples ${fruits.has("Apples")}`)
+
+        console.log(fruits.entries())
+
+        console.log(`Delete Kiwi from fruits ${fruits.delete("Kiwi")}`)
+
+         console.log(fruits.entries())
+
+         console.log(`Remove everthing ${fruits.clear()}`)
+
+          console.log(fruits.entries())
+
+
+
+
+    </script>
+</body>
+</html>

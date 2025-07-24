@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    // 1.Array: CAN STORE MANY DATA OF MUTIPLE DATA TYPES
+        // Index no starts with zero
+        // length = No of data in array
+        // arrayaname[indexNo] = value
+
+       let inventory = ["laptop","smartphone","talet","watch"]
+       console.log(inventory.length)
+       console.log(inventory[1]) 
+
+
+    //2. Object: Collection   {}
+    // key:value pair
+
+    let customer = {
+        name:"Frank",
+        email:"Frank@gmail.com",
+        phone:465436357
+    }
+    console.log(customer)
+    console.log(customer.email)
+              //ObjName.KeyName
+
+
+
+    //STACK: LIFO
+    
+    let plate = []  //stack is empty
+
+    //How To Add data in stack: push: Add or insert
+
+    plate.push("Plate 1")
+    plate.push("Plate 2")
+    plate.push("plate 3")
+    plate.push("plate 4")
+
+
+    // console.log(plate)
+    //How to remove data: pop
+
+    console.log(  plate.pop())   
+    console.log(  plate.pop()) 
+
+     console.log(plate)
+
+
+    //Real time Example
+    
+    let browserHistory = []
+    browserHistory.push("Instgram")
+    browserHistory.push("Youtube")
+    browserHistory.push("Eduureka")
+
+    console.log(browserHistory.pop())
+
+
+
+    //QUEUE: FIFO
+
+    let counterLine = [];  //Empty Queue
+    counterLine.push("Preeti")
+    counterLine.push("Anishika")
+    counterLine.push("Niger")
+    counterLine.push("frank")
+    counterLine.push("Leonard")
+    counterLine.push("Tawhid")
+
+    //Remove:FIFO
+
+   
+
+    console.log(counterLine.shift())   //Renmove Data from front
+    console.log(counterLine.shift()) 
+
+     console.log(counterLine)
+
+
+     //REAL LIFE EX
+     //Customer support System
+
+     let supportQueue = []
+     supportQueue.push("Ticket 1 came from Hussain")
+     supportQueue.push("Ticket 2 came from Aditya")
+     supportQueue.push("Ticket 3 came from Emmanuel")
+     supportQueue.push("Ticket 4 came from Ashraf")
+
+
+     //Concept : FIFO
+     console.log(supportQueue.shift())
+     console.log(supportQueue.shift())
+
+     console.log(supportQueue)
+
+
+        </script>
+</body>
+</html>

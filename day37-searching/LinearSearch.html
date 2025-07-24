@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //Algorithm - Linear / Sequential Search
+
+    //   function Search(arr,target){
+
+    //      for(let i = 0; i < arr.length;i++){
+
+    //           if(arr[i] === target){
+    //             return 'The Target Found at ' + i
+    //           }
+
+    //      }
+    //      return -1   //Target Not Found
+
+    //   }
+
+    //   let books = ["Maths","English","Harry potter","DSA","One piece"]
+
+    //   let targetBook = "XYZ"  //Index no - 4
+
+    //  let result =   Search(books,targetBook)
+    //  console.log(result)
+
+
+
+
+     //Sorting of Textual 
+
+    // let arr = ['apple','mango','orange','grapes','berries']
+
+    // console.log(` Before Storting : [${arr}]`)
+        
+    // arr.sort()
+      
+    // console.log(` After Storting : [${arr}]`)
+ 
+
+    //BINARY SEARCH: 
+    
+    function BinarySearch(arr,target){
+        
+        let left = 0
+        let right = arr.length-1
+        
+        while(left<=right){
+           let mid = Math.floor((left+right)/2)
+
+
+           if(arr[mid] === target){
+            return mid;
+           }else if(arr[mid] < target){
+                 left = mid + 1
+           }else { 
+            right = mid-1
+          }  
+
+    }
+    return 'Target not found'
+}
+
+    let sorrtedArray = [2,5,8,9,11,15]  //ARRAY SHOULD ALEWAYS BE SORTED
+    let targeTNumber = 8
+
+    let Result = BinarySearch(sorrtedArray,targeTNumber)
+    console.log(Result)
+
+
+    </script> 
+</body>
+</html>

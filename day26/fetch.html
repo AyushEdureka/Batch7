@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch("API ADDRESS"): fetch data the From API
+        //1. Convert the response in JSON Format
+                                    //  javascript Object Notation
+
+        //2.                            
+
+        fetch("https://randomuse.me/api")
+
+         .then(response=>response.json())
+         .then(data=>console.log(data.results))
+
+
+        .catch(error=>console.log("Error Connecting",error))
+    </script>
+</body>
+</html>
