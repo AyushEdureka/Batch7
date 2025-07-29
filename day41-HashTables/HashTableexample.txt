@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         class HashTable {
+
+             constructor(){
+                this.table = new Array(127); //Creating an array with 127 shelves
+                this.size = 0;
+             }
+
+             //Hash Function to find the shelf
+             _hash(key){
+                    let hash = 0;
+                    for(let i=0; i < key.length; i++){
+                       hash+=key.charCodeAt(i)
+                    }
+                    return hash % this.table.length;   //It will return Index No
+             }
+
+             //Add the data
+
+             set(key,value){
+               
+                const index = this._hash(key)
+
+                this.table[index] = [key,value]
+
+               this.size++
+             }
+
+
+             // Finding the data / value
+             get(key){
+                 const index = this._hash(key)
+
+                 return this.table[index]
+             }
+
+         }
+
+
+         //OBJECT - THEY ARE RESPONSIBLE TO ACCESS THE CLASS AND ITS METHOD
+
+         //OBJECT - new CLASSNAME
+
+         const myMusicLibrary = new HashTable()
+
+         myMusicLibrary.set('Blinding Lights','The Weekend')
+         myMusicLibrary.set('Kabhi Yadon me aoo','Aditya')
+         myMusicLibrary.set('Good Morning','Frank')
+         myMusicLibrary.set('Hello','Rute')
+         myMusicLibrary.set('Natu Natu','Omprakash')
+
+
+         console.log(myMusicLibrary)
+
+          
+          console.log(myMusicLibrary.get('Natu Natu'))
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Politics{
+            constructor(value){
+                this.value= value;
+                this.children = [];
+            }
+            addchild(child){
+                this.children.push(child)
+            }
+        }
+        let president = new Politics("President")
+        let vicePresident = new Politics("Vice President");
+        let ministers = new Politics("ministers");
+        let mps = new Politics("MPs");
+        let assemblyMan = new Politics("Assemblyman");
+        let unitComittee = new Politics("Unit Committee");
+        president.addchild(vicePresident);
+        president.addchild(ministers);
+        vicePresident.addchild(mps);
+        mps.addchild(assemblyMan);
+        assemblyMan.addchild(unitComittee);
+        console.log(president);
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+           //Tree- Required : Node
+
+           class TreeNode{
+
+                 constructor(value){
+                    this.value = value
+                    this.children = [];  //Empty Connection
+                 }
+                             //2
+                 addChild(ChildNode){
+                        //Push - Add children in array
+                        this.children.push(ChildNode)
+                 }
+
+           }
+
+           //Object- new Classname
+
+        let grandparent = new TreeNode("GP-RootNode")
+
+        let parent1 = new TreeNode("Parent 1")
+
+        let parent2 = new TreeNode("Parent 2")
+
+        let Child1 = new TreeNode("Child 1")
+
+        let child2 = new TreeNode("Child 2")
+
+
+          //Connection
+          
+          grandparent.addChild(parent1)
+          grandparent.addChild(parent2)
+
+          parent1.addChild(child2)
+          parent2.addChild(Child1)
+
+
+          console.log(grandparent)
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Politics{
+            constructor(value){
+                this.value= value;
+                this.children = [];
+            }
+            addchild(child){
+                this.children.push(child)
+            }
+        }
+        let president = new Politics("President")
+        let vicePresident = new Politics("Vice President");
+        let ministers = new Politics("ministers");
+        let mps = new Politics("MPs");
+        let assemblyMan = new Politics("Assemblyman");
+        let unitComittee = new Politics("Unit Committee");
+        president.addchild(vicePresident);
+        president.addchild(ministers);
+        vicePresident.addchild(mps);
+        mps.addchild(assemblyMan);
+        assemblyMan.addchild(unitComittee);
+        console.log(president);
+    </script>
+</body>
+</html>

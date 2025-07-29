@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+        class Grpah{
+
+            constructor(){
+                this.adjacenyList = {}
+            }
+
+            //1. Add A Node(Person)
+            addNode(node){
+                if(!this.adjacenyList[node]){
+                    this.adjacenyList[node] = []
+                }
+            }
+
+            //2. Add an Edge
+            addEdge(node1,node2){
+                this.adjacenyList[node1].push(node2)
+                this.adjacenyList[node2].push(node1)
+            }
+
+            //3.Remove an Edge
+            removeEdge(node1,node2){
+                this.adjacenyList[node1] = this.adjacenyList[node1].filter(friend => friend !== node2)
+                this.adjacenyList[node2] = this.adjacenyList[node2].filter(friend => friend !== node1)
+            }
+
+            // removeNode(node){
+              // ASSIGNMENT
+            // }
+        }    
+        
+        
+        const socailNetwokr = new Grpah()
+
+        socailNetwokr.addNode("Frank")
+        socailNetwokr.addNode("Bob")
+        socailNetwokr.addNode("Charlie")
+
+        socailNetwokr.addEdge("Frank","Bob")
+        socailNetwokr.addEdge("Frank","Charlie")
+
+        socailNetwokr.removeEdge("Frank","Charlie")
+
+        console.log(socailNetwokr.adjacenyList)
+
+
+    </script>
+</body>
+</html>
