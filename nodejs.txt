@@ -1,0 +1,27 @@
+const  http   =  require('http')
+
+//STEP 2 : Create The Server / BACKEND
+
+http.createServer((request,response)=>{
+
+response.write("HII EVERYONE FROM BACKEND")   
+response.write("Bye - Bye")
+response.write("Hello")
+
+response.end()
+
+
+}).listen(3000)  //Step 3 Start the server
+
+console.log("Server Running at http://localhost:3000 ")
+
+
+
+//STEP 1 : IMPORT ALL THE MODULES WHICH YOU REUIRE
+const os  =  require('os')
+
+ console.log("CPU STRUCTURE " + os.arch())
+
+ console.log("Total Memory " + os.totalmem())
+
+ console.log("Free Memory " + os.freemem())
