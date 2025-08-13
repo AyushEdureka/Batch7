@@ -1,0 +1,35 @@
+.team{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card{
+    margin-top: 40px;
+    width: 220px;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px blue;
+    transition: transform 0.5s ease-in;
+    text-shadow: 0 4px 5px white;
+}
+
+.card:hover{
+    background-color: cornsilk;
+    transform: scale(1.07);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-size: 34px;
+    font-family: cursive;
+    color: blue;
+}
